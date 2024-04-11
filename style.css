@@ -5,6 +5,7 @@
     --on_bancground_color: black;
     --surface_color: white;
     --onsurface_color: black;
+    --secondary_color: teal;
 
     --sidebar_width: 200px;
 }
@@ -19,30 +20,60 @@ body {
 .sidebar {
     height: 100vh;
     width: var(--sidebar_width);
-    /* flex: 1; */
     background-color: var(--primary_color);
     position: fixed;
+    box-shadow: -2px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .content {
     padding-left: var(--sidebar_width);
-
-    /* flex: 5; */
+    width: 100%;
     background-color: var(--background_color);
+}
+
+.content_cover {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background-color: var(--secondary_color);
+}
+
+.cover_child {
+    /* align-content: center; */
+    align-self: center;
+    width: 100%;
 
 }
 
-.content_cover {}
+.cover_heading {
+
+    font-size: 80px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--on_primary_color);
+    padding: 20px;
+}
+
+.cover_sub_heading {
+
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+    color: var(--on_primary_color);
+}
+
+
+
 
 .avatar {
     height: 150px;
     width: 150px;
     border-radius: 50%;
-    margin: 10px;
-    background-image: url(./assets/image/profile_photo.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-
+    margin: 20px;
 }
 
 .title {
@@ -58,21 +89,41 @@ body {
 
 }
 
+.onbackground {
+    color: var(--on_bancground_color);
+}
+
 .onprimary {
     color: var(--on_primary_color);
 }
 
 .navigatebutton {
     display: grid;
-    padding-top: 50%;
-    padding-bottom: 50%;
-    padding-left: 20%;
 }
 
 .navbutton {
-    width: inherit;
-    background-color: transparent;
-    border-color: transparent;
+   
     color: var(--on_primary_color);
     text-align: start;
+    padding: 5px;
+
 }
+
+a{
+    text-decoration: none;
+    color: var(--on_primary_color);
+}
+
+.navbutton_bottom {
+    color: var(--on_primary_color);
+    /* padding-left: 20%; */
+    text-decoration: none;
+    margin: 20px;
+}
+
+
+
+.other_content {
+    padding: 10px;
+}
+
