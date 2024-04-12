@@ -125,14 +125,17 @@ a{
 
 .other_content {
     padding: 10px;
+   
 }
 
 .skills_container{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-
+    justify-content: center;
+    /* padding: 5% 20%; */
+    padding-bottom: 50px;
+    
 }
 
 .card{
@@ -155,5 +158,60 @@ a{
     padding: 5px;
     font-size: 15px;
 }
+
+.skill_card{
+    flex: 0 0 40%; 
+    padding: 10px; 
+    box-sizing: border-box; 
+    margin: 20px;
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+    /* width: 200px; */
+    box-shadow: 1px 1px 5px var(--primary_color);
+}
+
+.skill_card .skill_title{
+    font-weight: 600;
+}
+
+.development_skill{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.progress {
+    height: 20px;
+    background-color: var(--primary_color); 
+}
+.skill_rating {
+    margin-top: 20px;
+    width: 100%; 
+    background-color: #c8c6c6; 
+}
+.single_certificate_container{
+    width: 50%;
+    padding: 20px 0px;
+}
+
+.certificate_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.single_certificate{
+    /* width: 40%; */
+    /* padding: 10px; */
+    display: flex;
+}
+.certificate_title{
+    padding: 0px 10px;
+}
+
+
+
 
 
