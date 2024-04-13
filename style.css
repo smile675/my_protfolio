@@ -211,6 +211,60 @@ a{
     padding: 0px 10px;
 }
 
+.projects_container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* padding: 5% 20%; */
+    padding-bottom: 50px;
+
+}
+.single_project{
+    padding: 10px;
+    flex: 0 0 40%; 
+    box-sizing: border-box; 
+    margin: 20px;
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+    /* width: 200px; */
+    box-shadow: 1px 1px 5px var(--primary_color);
+
+}
+
+.project_heading{
+    display: flex;
+    align-items: start;
+   
+}
+
+.project_heading img{
+    margin-right: 10px;
+    height: 60px;
+    width: 60px;
+}
+.project_name{
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+
+.project_technologies{
+    padding-top: 20px;
+}
+
+.single_technology {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
+
 
 
 

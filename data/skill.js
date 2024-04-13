@@ -107,3 +107,42 @@ const certificationList = [
     },
 ];
 
+const myProjectList = [
+    {
+        name: "Amazon Clone",
+        logo: "amazon-clone.png",
+        technologies : ["Flutter", "Node Js", "JavaScript", "MongoDB",],
+        desc: "A clone of the Amazon mobile application for Android.",
+    },
+
+    {
+        name: "Cashelp pro",
+        logo: "chp.png",
+        technologies : ["Flutter", "Sqflite", "SQL"],
+        desc: "A POS Android application for small retail shops to manage sales and basic accounts in offline mode with local database system.",
+    },
+    {
+        name: "Martlink Market Solution",
+        logo: "martlink.png",
+        technologies : ["Flutter", "PHP", "SQL Database"],
+        desc: "A marketplace solution for wholesalers, retailers, and small pop-up shops where each of them can interact with each other to promote their business and manage POS and accounting. Both mobile and web applications are available for this project.",
+    },
+    {
+        name: "Qr Profile",
+        logo: "qrprofile.png",
+        technologies : ["Flutter", "PHP", "SQL Database", "HTML", "CSS", "JavaScript"],
+        desc: "A personal online profile service with the power of QR. A user can use many features, such as creating a profile, resume, social and e-commerce network, and share each of them using a single dynamic QR Code or Link. Additionally, this has a bonus feature of creating an NFC Business card.",
+    },
+    {
+        name: "Mytra Clone",
+        logo: "mytra-clone.png",
+        technologies : ["HTML", "CSS", "JavaScript"],
+        desc: "This is a clone application of the Mytra E-commerce website using pure HTML, CSS, and JavaScript for learning purposes.",
+    },
+    {
+        name: "Movie Browser",
+        logo: "movie-browser.png",
+        technologies : ["React JS", "CSS", "Boostrap"],
+        desc: "A website to browse any movie from the TMDb API. This website is for practicing React JS.",
+    },
+];

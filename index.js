@@ -6,6 +6,7 @@ function onLoad(){
    displayProgrammingSkills();
    displayDevelopmentSkills();
    displayCertifications();
+   displayProjectList();
 }
 
 
@@ -83,4 +84,47 @@ function displayCertifications(){
 
     certificateElement.innerHTML = innerHTML;
 
+}
+
+
+
+function displayProjectList(){
+    let projectlistElement = document.querySelector('.projects_container');
+    let innerHTML = '';
+
+    myProjectList.forEach(project=>{
+        let name = project.name;
+        let logo = project.logo;
+        let desc = project.desc;
+        let technologies = project.technologies;
+        let techHtml = '';
+        technologies.forEach(tech =>{
+            techHtml += `
+            <span class="single_technology">
+                            ${tech}
+                        </span>
+            `;
+        });
+
+        innerHTML +=`
+
+        <div class="single_project">
+        <div class="project_heading">
+            <img src="/assets/project-logo/${logo}" alt="img">
+           <div>
+            <div class="project_name">${name}</div>
+            <div class="project_description">
+                ${desc}
+            </div>
+           </div>
+        </div>
+        <div class="project_technologies">
+            ${techHtml}
+        </div>                    
+    </div>
+        
+        `;
+    });
+
+    projectlistElement.innerHTML = innerHTML;
 }
