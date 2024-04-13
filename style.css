@@ -252,16 +252,82 @@ a{
 
 .project_technologies{
     padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 .single_technology {
     display: inline-block;
     margin-right: 10px;
+    margin-top: 5px;
     padding: 5px 10px;
     background-color: #f0f0f0;
     border-radius: 5px;
     font-size: 14px;
 }
+
+.contact_form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    
+}
+
+.input_group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input_group i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+}
+
+.input_group input {
+    padding-left: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 40px;
+    font-size: 16px;
+    outline: none;
+}
+
+button {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#mail_body{
+    width: 100%;
+    min-height: 200px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form_button{
+   width: 200px;
+}
+
 
 
 

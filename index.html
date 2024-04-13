@@ -91,12 +91,30 @@
         <hr>
         <div id="contact">
             <h1 class="title onbackground">Contact</h1>
-
+            <form class="contact_form" id="contactForm" action="submit">
+                <div class="input_group">
+                    <i class="fas fa-user"></i>
+                    <input id="mail_name" type="text" placeholder="Name" required>
+                </div>
+                <div class="input_group">
+                    <i class="fas fa-heading"></i>
+                    <input id="mail_title" type="text" placeholder="Title" required>
+                </div>
+                <div class="input_group">
+                    <textarea id="mail_body" placeholder="Your Message Here" required></textarea>
+                </div>
+                <div class="buttons">
+                    <button class="form_button" id="btn_send_email">Send Email</button>
+                <button class="form_button" id="btn_clear_form" type="button">Clear Form</button>
+                </div>
+            </form>
+                              
         </div>
     </div>
 
     <script src="data/skill.js"></script>
     <script src="index.js"></script>
+    <script src="send_email.js"></script>
     
 
 </body>

@@ -128,3 +128,5 @@ function displayProjectList(){
 
     projectlistElement.innerHTML = innerHTML;
 }
+
+
