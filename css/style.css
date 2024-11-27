@@ -98,7 +98,7 @@ h6 {
     transition: all ease-in-out 0.3s;
     overflow-y: auto;
     z-index: 997;
-    border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    border-right: 1px solid var(--default-color);
 }
 
 @media (min-width: 1200px) {
@@ -137,8 +137,12 @@ h6 {
     transition: background-color 0.3s;
 }
 
-
 .header .header-toggle:hover {
-    color: var(--contrast-color);
-    background-color: color-mix(in srgb, var(--accent-color) 90%, white 15%);
+    background-color: rgba(0, 123, 255, 0.85);
+    /* Fallback */
+}
+
+.header .header-toggle:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
 }

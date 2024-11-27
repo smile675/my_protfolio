@@ -1,29 +1,25 @@
 (function () {
     "use strict";
 
-    /**
-  * Header toggle
-  */
+    const header = document.querySelector('#header');
     const headerToggleBtn = document.querySelector('.header-toggle');
 
+    // Toggle sidebar visibility
     function headerToggle() {
-        document.querySelector('#header').classList.toggle('header-show');
-        headerToggleBtn.classList.toggle('bi-list');
-        headerToggleBtn.classList.toggle('bi-x');
+        const isShown = header.classList.toggle('header-show');
+        headerToggleBtn.setAttribute('aria-expanded', isShown);
+        headerToggleBtn.classList.toggle('bi-list', !isShown);
+        headerToggleBtn.classList.toggle('bi-x', isShown);
     }
+
     headerToggleBtn.addEventListener('click', headerToggle);
 
-    /**
- * Hide mobile nav on same-page/hash links
- */
-    document.querySelectorAll('#navmenu a').forEach(navmenu => {
-        navmenu.addEventListener('click', () => {
-            if (document.querySelector('.header-show')) {
+    // Hide sidebar on same-page/hash link clicks
+    document.querySelectorAll('#navmenu a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (header.classList.contains('header-show')) {
                 headerToggle();
             }
         });
-
     });
-
-
-})
+})();
