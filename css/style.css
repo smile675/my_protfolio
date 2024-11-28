@@ -76,6 +76,10 @@ a:hover {
     text-decoration: none;
 }
 
+li strong {
+    margin-right: 8px;
+}
+
 h1,
 h2,
 h3,
@@ -145,4 +149,155 @@ h6 {
 .header .header-toggle:focus {
     outline: 2px solid var(--accent-color);
     outline-offset: 2px;
+}
+
+
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+.mobile-nav-toggle {
+    display: none;
+}
+
+.navmenu {
+    padding: 0;
+    z-index: 9997;
+}
+
+.navmenu ul {
+    list-style: none;
+    padding: 0 0 20px 0;
+    margin: 0;
+}
+
+.navmenu a,
+.navmenu a:focus {
+    color: var(--nav-color);
+    padding: 15px 10px;
+    font-family: var(--nav-font);
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.navmenu a .navicon,
+.navmenu a:focus .navicon {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+
+.navmenu a:hover,
+.navmenu .active,
+.navmenu .active:focus {
+    color: var(--nav-hover-color);
+}
+
+.navmenu a:hover .navicon,
+.navmenu .active .navicon,
+.navmenu .active:focus .navicon {
+    color: var(--accent-color);
+}
+
+
+/*--------------------------------------------------------------
+# Global Section Titles
+--------------------------------------------------------------*/
+.section-title {
+    padding-bottom: 60px;
+    position: relative;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.section-title h2:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--accent-color);
+    left: 0;
+    bottom: 0;
+}
+
+.section-title p {
+    margin-bottom: 0;
+}
+
+
+/* Section Styles */
+.about {
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+    padding: 50px 0;
+}
+
+/* Profile Card */
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Centers content vertically */
+    align-items: center;
+    /* Centers content horizontally */
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+
+
+.profile-card:hover {
+    transform: translateY(-5px);
+}
+
+.profile-card img {
+    /* width: 120px;
+    height: 120px; */
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+}
+
+/* Text Styles */
+.about h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #343a40;
+}
+
+.about ul {
+    padding: 0;
+}
+
+.about ul li {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.about ul li i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.about p {
+    line-height: 1.8;
+}
+
+/* Icon Colors */
+.bi {
+    color: #007bff;
 }

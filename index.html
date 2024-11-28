@@ -21,19 +21,106 @@
     <!-- responsive sidebar -->
     <header id="header" class="header dark-background d-flex flex-column">
         <i class="header-toggle d-xl-none bi bi-list"></i>
-        <div>
-            header items
-        </div>
+        <a href="index.html" class="d-flex align-items-center justify-content-center mt-3">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <!-- <img src="assets/img/logo.png" alt=""> -->
+            <h1 class="sitename">Ismail Hossain</h1>
+        </a>
+
+
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="#about" class="active"><i class="bi bi-house navicon"></i>About</a></li>
+                <li><a href="#skill"><i class="bi bi-person navicon"></i> Skills</a></li>
+                <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+                <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+                <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+            </ul>
+        </nav>
 
     </header>
 
     <!-- main content -->
     <main>
-        <section>
-            <h1>About</h1>
-            <p>Your about content goes here.</p>
+        <section id="about" class="about section bg-light py-5">
+            <div class="container">
+                <div class="row align-items-stretch">
+                    <!-- Profile Section -->
+                    <div class="col-lg-4 text-center d-flex align-items-center">
+                        <div class="profile-card shadow-lg p-4 bg-white rounded w-100 h-100">
+                            <img src="assets/image/profile_photo.jpg" class="profile-image rounded-circle mb-3"
+                                alt="Profile Photo">
+                            <h3 class="mt-3">Ismail Hossain</h3>
+                            <p class="text-primary">Software Developer</p>
+                        </div>
+                    </div>
+                    <!-- About Section -->
+                    <div class="col-lg-8">
+                        <h2 class="mb-4 text-dark">About Me</h2>
+                        <p class="fst-italic text-muted">
+                            I am passionate about creating modern, scalable software solutions that address real-world
+                            problems.
+                        </p>
+
+                        <!-- Information Grid -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-3">
+                                        <i class="bi bi-calendar text-primary me-2"></i>
+                                        <strong>Birthday:</strong> <span> 7 July 1995</span>
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="bi bi-globe text-primary me-2"></i>
+                                        <strong>Website: </strong> <span> www.ismail.top</span>
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="bi bi-telephone text-primary me-2"></i>
+                                        <strong>Phone: </strong> <span> +601-11 622 0501</span>
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="bi bi-flag text-primary me-2"></i>
+                                        <strong>Nationality: </strong> <span> Bangladeshi</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-3">
+                                        <i class="bi bi-geo-alt text-primary me-2"></i>
+                                        <strong>Location: </strong><span> Petaling Jaya, Malaysia</span>
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="bi bi-laptop text-primary me-2"></i>
+                                        <strong>Experience: </strong> <span> 3+ years</span>
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="bi bi-envelope text-primary me-2"></i>
+                                        <strong>Email: </strong> <span> scripts.ismail@gmail.com</span>
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="bi bi-heart text-primary me-2"></i>
+                                        <strong>Hobbies: </strong> <span> Reading, Chess, Coding</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Additional Description -->
+                        <p class="mt-4 text-muted">
+                            I specialize in designing, developing, and deploying software applications that enhance user
+                            experiences
+                            and drive innovation. My goal is to create impactful solutions that empower individuals and
+                            businesses.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section>
+
+
+        <section id="skills">
             <h1>Skills</h1>
             <p>Your skills content goes here.</p>
         </section>
