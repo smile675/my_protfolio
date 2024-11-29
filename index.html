@@ -15,6 +15,15 @@
 
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- for icons -->
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Iconify CDN -->
+    <script src="https://code.iconify.design/2/2.0.0-rc.6/iconify.min.js"></script>
+
 </head>
 
 <body class="d-flex">
@@ -32,7 +41,7 @@
         <nav id="navmenu" class="navmenu">
             <ul>
                 <li><a href="#about" class="active"><i class="bi bi-house navicon"></i>About</a></li>
-                <li><a href="#skill"><i class="bi bi-person navicon"></i> Skills</a></li>
+                <li><a href="#skills"><i class="bi bi-person navicon"></i> Skills</a></li>
                 <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
                 <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
                 <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
@@ -43,7 +52,7 @@
 
     <!-- main content -->
     <main>
-        <section id="about" class="about section bg-light py-5">
+        <section id="about" class="about section py-5">
             <div class="container">
                 <div class="row align-items-stretch">
                     <!-- Profile Section -->
@@ -121,32 +130,410 @@
                 </div>
             </div>
         </section>
+        <!-- Skills Section -->
+        <section id="skills" class="skills section py-5">
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Skills</h2>
+                <p>Throughout my career, working on numerous personal and client projects, I have honed a diverse set of
+                    programming skills, and I continue to refine and expand my expertise through continuous learning.
+                </p>
+            </div><!-- End Section Title -->
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row skills-content">
+                    <div class="col-lg-6 d-flex flex-column gap-3">
+                        <!-- html -->
+                        <div>
+                            <div class="d-flex justify-content-between skill_name">
+                                <div>
+                                    <i class="fa-brands fa-html5 skill-icon"></i>
+                                    <span class="name">HTML</span>
+                                </div>
+                                <span class="val">90%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="90"
+                                aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <!-- end of html -->
+                        <!-- css -->
+                        <div>
+                            <div class="d-flex justify-content-between skill_name">
+                                <div>
+                                    <i class="fa-brands fa-css3-alt skill-icon"></i>
+                                    <span class="name">CSS</span>
+                                </div>
+                                <span class="val">80%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="80"
+                                aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <!-- end of css -->
+                        <!-- js -->
+                        <div>
+                            <div class="d-flex justify-content-between skill_name">
+                                <div>
+                                    <i class="fa-brands fa-js skill-icon"></i>
+                                    <span class="name">JavaScript</span>
+                                </div>
+                                <span class="val">70%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="70"
+                                aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <!-- end of js -->
+                        <!-- php -->
+                        <div>
+                            <div class="d-flex justify-content-between skill_name">
+                                <div>
+                                    <i class="fa-brands fa-php"></i>
+                                    <span class="name">PHP</span>
+                                </div>
+                                <span class="val">80%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="80"
+                                aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <!-- end of php -->
+                        <!-- sql -->
+                        <div>
+                            <div class="d-flex justify-content-between skill_name">
+                                <div>
+                                    <i class="fa-solid fa-database"></i>
+                                    <span class="name">SQL</span>
+                                </div>
+                                <span class="val">95%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="95"
+                                aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <!-- end of sql -->
+                        <!-- sqlite -->
+                        <div>
+                            <div class="d-flex justify-content-between skill_name">
+                                <div>
+                                    <i class="fa-solid fa-database"></i>
+                                    <span class="name">SQLite</span>
+                                </div>
+                                <span class="val">85%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="85"
+                                aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <!-- end of sqlite -->
+                        <!-- nodejs -->
+                        <div>
+                            <div class="d-flex justify-content-between skill_name">
+                                <div>
+                                    <i class="fa-brands fa-node-js"></i>
+                                    <span class="name">Node JS</span>
+                                </div>
+                                <span class="val">70%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="70"
+                                aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <!-- end of nodejs -->
+                        <!-- r -->
+                        <div>
+                            <div class="d-flex justify-content-between skill_name">
+                                <div>
+                                    <i class="fa-brands fa-r-project"></i>
+                                    <span class="name">R Programming</span>
+                                </div>
+                                <span class="val">30%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="30"
+                                aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar" style="width: 30%"></div>
+                            </div>
+                        </div>
+                        <!-- end of r -->
+                    </div>
+
+                    <div class="col-lg-6 d-flex flex-column gap-3">
+                        <!-- dart -->
+                        <div>
+                            <div class="d-flex justify-content-between skill_name">
+                                <div>
+                                    <i class="fa-brands fa-dart-lang"></i>
+                                    <span class="name">Dart</span>
+                                </div>
+                                <span class="val">60%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="60"
+                                aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <!-- end of dart -->
+                        <!-- flutter -->
+                        <div>
+                            <div class="d-flex justify-content-between skill_name">
+                                <div>
+                                    <i class="fa-brands fa-flutter"></i>
+                                    <span class="name">Flutter</span>
+                                </div>
+                                <span class="val">90%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="90"
+                                aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <!-- end of flutter -->
+                        <!-- react -->
+                        <div>
+                            <div class="d-flex justify-content-between skill_name">
+                                <div>
+                                    <i class="fa-brands fa-react"></i>
+                                    <span class="name">React JS</span>
+                                </div>
+                                <span class="val">80%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="80"
+                                aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <!-- end of react -->
+                        <!-- Next Js -->
+                        <div>
+                            <div class="d-flex justify-content-between skill_name">
+                                <div>
+                                    <span class="nextjs-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20"
+                                            height="20">
+                                            <circle cx="50" cy="50" r="48" fill="black" />
+                                            <text x="50%" y="52%" fill="white" font-size="50"
+                                                font-family="Arial, sans-serif" text-anchor="middle"
+                                                dominant-baseline="middle">N</text>
+                                        </svg>
+                                    </span>
+
+                                    <span class="name">Next JS</span>
+                                </div>
+                                <span class="val">80%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="80"
+                                aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <!-- end of next js -->
+                        <!-- c -->
+                        <div>
+                            <div class="d-flex justify-content-between skill_name">
+                                <div>
+                                    <span class="c-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20"
+                                            height="20">
+                                            <circle cx="50" cy="50" r="48" fill="black" />
+                                            <text x="50%" y="52%" fill="white" font-size="50"
+                                                font-family="Arial, sans-serif" text-anchor="middle"
+                                                dominant-baseline="middle">C</text>
+                                        </svg>
+                                    </span>
+
+                                    <span class="name">C</span>
+                                </div>
+                                <span class="val">50%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50"
+                                aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        <!-- end of c -->
+                        <!-- python -->
+                        <div>
+                            <div class="d-flex justify-content-between skill_name">
+                                <div>
+                                    <i class="fa-brands fa-python"></i>
+
+                                    <span class="name">Python</span>
+                                </div>
+                                <span class="val">85%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="85"
+                                aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <!-- end of python -->
+                        <!-- django -->
+                        <div>
+                            <div class="d-flex justify-content-between skill_name">
+                                <div>
+                                    <span class="django-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20"
+                                            height="20">
+                                            <circle cx="50" cy="50" r="48" fill="#092E20" />
+                                            <text x="50%" y="52%" fill="white" font-size="50"
+                                                font-family="Arial, sans-serif" text-anchor="middle"
+                                                dominant-baseline="middle">Dj</text>
+                                        </svg>
+                                    </span>
 
 
-        <section id="skill" class="skill section bg-light py-5">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Skills</h2>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, incidunt. Sapiente, quos saepe
-                        voluptate voluptatum eaque tempora ea delectus. Corporis.
-                    </p>
-                </div>
+                                    <span class="name">Django</span>
+                                </div>
+                                <span class="val">85%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="85"
+                                aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <!-- end of django -->
+
+                        <!-- flask -->
+                        <div>
+                            <div class="d-flex justify-content-between skill_name">
+                                <div>
+                                    <span class="flask-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20"
+                                            height="20">
+                                            <circle cx="50" cy="50" r="48" fill="black" />
+                                            <text x="50%" y="52%" fill="white" font-size="50"
+                                                font-family="Arial, sans-serif" text-anchor="middle"
+                                                dominant-baseline="middle">F</text>
+                                        </svg>
+                                    </span>
 
 
 
-
-
-                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75"
-                    aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+                                    <span class="name">Flask</span>
+                                </div>
+                                <span class="val">85%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="85"
+                                aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <!-- end of flask -->
+                    </div>
                 </div>
             </div>
-        </section>
-        <section>
-            <h1>Resume</h1>
-            <p>Your resume content goes here.</p>
-        </section>
+
+        </section><!-- /Skills Section -->
+        <!-- Resume Section -->
+        <section id="resume" class="resume section py-5">
+
+            <!-- Section Title -->
+            <div class="container section-title">
+                <h2>Resume</h2>
+                <p>I have built a diverse career across various fields, including accounting, import/export
+                    documentation, graphic design, product quality improvements, marketing, and stock management. These
+                    experiences have shaped my problem-solving and organizational skills, preparing me for my current
+                    focus: software development. With a strong foundation in multiple industries, I bring a unique
+                    perspective to software solutions, continually learning and adapting as I advance in my programming
+                    journey. Today, I am committed to mastering new technologies and delivering impactful software
+                    solutions.</p>
+            </div><!-- End Section Title -->
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="resume-title">Sumary</h3>
+
+                        <div class="resume-item pb-0">
+                            <h4>Brandon Johnson</h4>
+                            <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing
+                                    and
+                                    developing user-centered digital/print marketing material from initial concept to
+                                    final, polished
+                                    deliverable.</em></p>
+                            <ul>
+                                <li>Portland par 127,Orlando, FL</li>
+                                <li>(123) 456-7891</li>
+                                <li>alice.barkley@example.com</li>
+                            </ul>
+                        </div><!-- Edn Resume Item -->
+
+                        <h3 class="resume-title">Education</h3>
+                        <div class="resume-item">
+                            <h4>Master of Fine Arts &amp; Graphic Design</h4>
+                            <h5>2015 - 2016</h5>
+                            <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+                            <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero
+                                voluptatum qui
+                                ut dignissimos deleniti nerada porti sand markend</p>
+                        </div><!-- Edn Resume Item -->
+
+                        <div class="resume-item">
+                            <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
+                            <h5>2010 - 2014</h5>
+                            <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+                            <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel
+                                ratione eius
+                                unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque
+                                etlon sader mart
+                                dila</p>
+                        </div><!-- Edn Resume Item -->
+
+                    </div>
+
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="resume-title">Professional Experience</h3>
+                        <div class="resume-item">
+                            <h4>Senior graphic design specialist</h4>
+                            <h5>2019 - Present</h5>
+                            <p><em>Experion, New York, NY </em></p>
+                            <ul>
+                                <li>Lead in the design, development, and implementation of the graphic, layout, and
+                                    production
+                                    communication materials</li>
+                                <li>Delegate tasks to the 7 members of the design team and provide counsel on all
+                                    aspects of the
+                                    project. </li>
+                                <li>Supervise the assessment of all graphic materials in order to ensure quality and
+                                    accuracy of the
+                                    design</li>
+                                <li>Oversee the efficient use of production project budgets ranging from $2,000 -
+                                    $25,000</li>
+                            </ul>
+                        </div><!-- Edn Resume Item -->
+
+                        <div class="resume-item">
+                            <h4>Graphic design specialist</h4>
+                            <h5>2017 - 2018</h5>
+                            <p><em>Stepping Stone Advertising, New York, NY</em></p>
+                            <ul>
+                                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations,
+                                    and
+                                    advertisements).</li>
+                                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
+                                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
+                                <li>Created 4+ design presentations and proposals a month for clients and account
+                                    managers</li>
+                            </ul>
+                        </div><!-- Edn Resume Item -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section><!-- /Resume Section -->
         <section>
             <h1>Portfolio</h1>
             <p>Your portfolio content goes here.</p>
