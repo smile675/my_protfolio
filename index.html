@@ -31,13 +31,9 @@
     <header id="header" class="header dark-background d-flex flex-column">
         <i class="header-toggle d-xl-none bi bi-list"></i>
         <a href="index.html" class="d-flex align-items-center justify-content-center mt-3">
-            <!-- Uncomment the line below if you also wish to use an image logo -->
-            <!-- <img src="assets/img/logo.png" alt=""> -->
-            <h1 class="sitename">Ismail Hossain</h1>
+
+            <h2 class="sitename">Ismail Hossain</h2>
         </a>
-
-
-
         <nav id="navmenu" class="navmenu">
             <ul>
                 <li><a href="#about" class="active"><i class="bi bi-house navicon"></i>About</a></li>
@@ -84,33 +80,35 @@
                                         <strong>Birthday:</strong> <span> 7 July 1995</span>
                                     </li>
                                     <li class="mb-3">
-                                        <i class="bi bi-globe text-primary me-2"></i>
-                                        <strong>Website: </strong> <span> www.ismail.top</span>
-                                    </li>
-                                    <li class="mb-3">
-                                        <i class="bi bi-telephone text-primary me-2"></i>
-                                        <strong>Phone: </strong> <span> +601-11 622 0501</span>
-                                    </li>
-                                    <li class="mb-3">
                                         <i class="bi bi-flag text-primary me-2"></i>
                                         <strong>Nationality: </strong> <span> Bangladeshi</span>
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="bi bi-droplet-fill text-primary me-2"></i>
+                                        <strong>Blood Group: </strong> <span> A+</span>
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="bi bi-globe text-primary me-2"></i>
+                                        <strong>Website: </strong> <span> www.ismail.top</span>
                                     </li>
                                 </ul>
                             </div>
                             <div class="col-md-6">
                                 <ul class="list-unstyled">
                                     <li class="mb-3">
-                                        <i class="bi bi-geo-alt text-primary me-2"></i>
-                                        <strong>Location: </strong><span> Petaling Jaya, Malaysia</span>
-                                    </li>
-                                    <li class="mb-3">
-                                        <i class="bi bi-laptop text-primary me-2"></i>
-                                        <strong>Experience: </strong> <span> 3+ years</span>
+                                        <i class="bi bi-telephone text-primary me-2"></i>
+                                        <strong>Phone: </strong> <span> +601-11 622 0501</span>
                                     </li>
                                     <li class="mb-3">
                                         <i class="bi bi-envelope text-primary me-2"></i>
                                         <strong>Email: </strong> <span> scripts.ismail@gmail.com</span>
                                     </li>
+
+                                    <li class="mb-3">
+                                        <i class="bi bi-geo-alt text-primary me-2"></i>
+                                        <strong>Location: </strong><span> Petaling Jaya, Malaysia</span>
+                                    </li>
+
                                     <li class="mb-3">
                                         <i class="bi bi-heart text-primary me-2"></i>
                                         <strong>Hobbies: </strong> <span> Reading, Chess, Coding</span>
@@ -545,9 +543,9 @@
 
                         <div class="resume-item">
                             <h4>Bachelor of Mechanical Engineering</h4>
-                            <h5>2014 - 2018</h5>
+                            <h5>2014 - 2020</h5>
                             <p><em>Inti Internation College, Subang, Malaysia</em></p>
-                            <p>Result: CGPA 5.00</p>
+                            <p>Result: Second class (Lower Division)</p>
                         </div><!-- Edn Resume Item -->
 
                         <div class="resume-item">
@@ -680,17 +678,243 @@
                     </div>
 
                 </div>
+            </div>
+        </section><!-- /Resume Section -->
 
+        <section id="portfolio" class="portfolio section py-5">
+            <div class="container">
+                <!-- Section Title -->
+                <div class="section-title">
+                    <h2>Portfolio</h2>
+                    <p>I specialize in creating diverse applications ranging from mobile apps to static websites and
+                        dynamic web applications. My projects leverage a variety of technologies and frameworks,
+                        including HTML, CSS, JavaScript, React, Next.js, Python, Django, and PHP.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <ul class="nav nav-tabs card-header-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active filter-btn" data-filter="all">
+                                    <i class="bi bi-collection me-2"></i>
+                                    <span>All</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link filter-btn" data-filter="mobile">
+                                    <i class="bi bi-phone me-2"></i>
+                                    <span class="d-none d-md-inline">Mobile Apps</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link filter-btn" data-filter="static">
+                                    <i class="bi bi-laptop me-2"></i>
+                                    <span class="d-none d-md-inline">Static Website</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link filter-btn" data-filter="web">
+                                    <i class="bi bi-cloud-check me-2"></i>
+                                    <span class="d-none d-md-inline">Web Application</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card-body">
+
+                        <!-- Projects Grid -->
+                        <div class="row g-4">
+                            <!-- Mobile App Project -->
+
+                            <div class="col-md-4 project-card" data-category="mobile">
+                                <div class="card project_card_inner">
+                                    <img src="assets/project-logo/chp.png" class="card-img-top project-logo"
+                                        alt="Mobile App Project">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Cashelp Pro</h5>
+                                        <p class="card-text">A mobile application with offline POS system</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 project-card" data-category="mobile">
+                                <div class="card project_card_inner">
+                                    <img src="assets/project-logo/martlink.png" class="card-img-top project-logo"
+                                        alt="Mobile App Project">
+                                    <div class="card-body">
+                                        <h5 class="card-title">MartLink App</h5>
+                                        <p class="card-text">An application to build a marketing chain between suppliers
+                                            and retailers</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-md-4 project-card" data-category="web">
+                                <div class="card project_card_inner">
+                                    <img src="assets/project-logo/qrprofile.png" class="card-img-top project-logo"
+                                        alt="Mobile App Project">
+                                    <div class="card-body">
+                                        <h5 class="card-title">QR Profile</h5>
+                                        <p class="card-text">A website to generate dynamic and static qr codes</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 project-card" data-category="static">
+                                <div class="card project_card_inner">
+                                    <img src="assets/project-logo/movie-browser.png" class="card-img-top project-logo"
+                                        alt="Mobile App Project">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Movie Browser</h5>
+                                        <p class="card-text">A website to browse movie details from IMDB server</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 project-card" data-category="web">
+                                <div class="card project_card_inner">
+                                    <img src="assets/project-logo/sort-logo.png" class="card-img-top project-logo"
+                                        alt="Mobile App Project">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Sort IT</h5>
+                                        <p class="card-text">A web application to promote personal development</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 project-card" data-category="web">
+                                <div class="card project_card_inner">
+                                    <img src="assets/project-logo/authenticator.png" class="card-img-top project-logo"
+                                        alt="Mobile App Project">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Authentication</h5>
+                                        <p class="card-text">A web application for various type of user authentications
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 project-card" data-category="web">
+                                <div class="card project_card_inner">
+                                    <img src="assets/project-logo/distributor.png" class="card-img-top project-logo"
+                                        alt="Mobile App Project">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Distributor</h5>
+                                        <p class="card-text">Web application to manage all crucial activies of a
+                                            distributor company
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 project-card" data-category="web">
+                                <div class="card project_card_inner">
+                                    <img src="assets/project-logo/quote.png" class="card-img-top project-logo"
+                                        alt="Mobile App Project">
+                                    <div class="card-body">
+                                        <h5 class="card-title">MyWords</h5>
+                                        <p class="card-text">A social application promote unique quotes publications for
+                                            authors
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- amazon clone -->
+                            <div class="col-md-4 project-card" data-category="mobile">
+                                <div class="card project_card_inner">
+                                    <img src="assets/project-logo/amazon-clone.png" class="card-img-top project-logo"
+                                        alt="Mobile App Project">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Amazon Clone</h5>
+                                        <p class="card-text">A mobile app with all features of Amazon</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- mytra clone -->
+                            <div class="col-md-4 project-card" data-category="static">
+                                <div class="card project_card_inner">
+                                    <img src="assets/project-logo/mytra-clone.png" class="card-img-top project-logo"
+                                        alt="Mobile App Project">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Mytra Clone</h5>
+                                        <p class="card-text">Aa website cloning Mytra an e-commerce Website</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- contacts -->
+        <section id="contact" class="contact section py-5">
+            <div class="container section-title">
+                <h2>Contacts</h2>
+                <p>Below is my contact details. Reach out me with any of those</p>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <!-- Left Column: Phone, Email, WhatsApp -->
+                    <div class="col-md-6">
+                        <ul class="list-group list-group-flush">
+                            <!-- Phone -->
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="bi bi-telephone-fill me-3 text-primary"></i>
+                                <a href="tel:+601116220501">+601-11 622 0501</a>
+                            </li>
+                            <!-- Email -->
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="bi bi-envelope-fill me-3 text-danger"></i>
+                                <a href="mailto:angred.ismail@gmail.com">angred.ismail@gmail.com</a>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="bi bi-envelope-fill me-3 text-danger"></i>
+                                <a href="mailto:scripts.ismail@gmail.com">scripts.ismail@gmail.com</a>
+                            </li>
+                            <!-- WhatsApp -->
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="bi bi-whatsapp me-3 text-success"></i>
+                                <a href="https://wa.me/+601116220501">+601-11 622 0501</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Right Column: GitHub, LinkedIn, Facebook, Twitter-X -->
+                    <div class="col-md-6">
+                        <ul class="list-group list-group-flush">
+                            <!-- Facebook -->
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="bi bi-facebook me-3 text-primary"></i>
+                                <a href="https://facebook.com/profile.php?id=61557324994989" target="_blank"
+                                    class="text-decoration-none">Facebook</a>
+                            </li>
+                            <!-- GitHub -->
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="bi bi-github text-dark me-3"></i>
+                                <a href="https://github.com/smile675" target="_blank"
+                                    class="text-decoration-none">GitHub</a>
+                            </li>
+                            <!-- LinkedIn -->
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="bi bi-linkedin me-3 text-primary"></i>
+                                <a href="https://linkedin.com/in/ismail-hossain--profile" target="_blank"
+                                    class="text-decoration-none">LinkedIn</a>
+                            </li>
+                            <!-- Twitter (X) -->
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="bi bi-twitter-x me-3 text-dark"></i>
+                                <a href="https://x.com/smile_675" target="_blank" class="text-decoration-none">Twitter
+                                    (X)</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
-        </section><!-- /Resume Section -->
-        <section>
-            <h1>Portfolio</h1>
-            <p>Your portfolio content goes here.</p>
-        </section>
-        <section>
-            <h1>Contact</h1>
-            <p>Your contact content goes here.</p>
         </section>
     </main>
 

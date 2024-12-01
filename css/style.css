@@ -104,7 +104,7 @@ h6 {
     left: 0;
     bottom: 0;
     padding: 0 15px;
-    width: 300px;
+    width: 250px;
     transition: all ease-in-out 0.3s;
     overflow-y: auto;
     z-index: 997;
@@ -115,7 +115,7 @@ h6 {
 
     .header~main,
     .header~#footer {
-        margin-left: 300px;
+        margin-left: 250px;
     }
 }
 
@@ -403,4 +403,33 @@ main {
     top: 0;
     background: var(--background-color);
     border: 2px solid var(--accent-color);
+}
+
+
+/*--------------------------------------------------------------
+# Portfolio section
+--------------------------------------------------------------*/
+
+.portfolio a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.project-logo {
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    object-fit: contain;
+}
+
+.project_card_inner {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project_card_inner .card-body {
+    text-align: center;
 }
