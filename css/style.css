@@ -294,6 +294,15 @@ main {
     border: 3px solid var(--accent-color);
 }
 
+/* info card */
+
+.info-card {
+    padding: 15px;
+    height: 100%;
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+}
+
 .about ul {
     padding: 0;
 }
