@@ -5,12 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ismail Hossain</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./data/about.js"></script>
+    <script src="./js/script.js"></script>
 </head>
 
-<body class="color-background">
-    <h1 class="color-text">This is a basic text</h1>
-    <p class="color-string fw-bold">This is a basic string</p>
+<body>
+    <div class="terminal">
+        <div class="terminal-header">
+            <span class="terminal-title">ismail@dev: ~/portfolio</span>
+        </div>
+        <div class="terminal-body" id="terminal-body">
+            <div id="output"></div>
+            <div class="input-line">
+                <span class="prompt" id="prompt">guest@portfolio:~$</span>
+                <input type="text" id="command-input" autocomplete="off" autofocus>
+            </div>
+        </div>
+        <div class="command-bar" id="command-bar">
+            <span class="command-hint" data-cmd="help"><span class="cmd">help:</span> see available commands</span>
+            <span class="command-hint" data-cmd="about"><span class="cmd">about:</span> about me</span>
+            <span class="command-hint" data-cmd="education"><span class="cmd">edu:</span> my educational journey</span>
+            <span class="command-hint" data-cmd="projects"><span class="cmd">projects:</span> show my projects</span>
+            <span class="command-hint" data-cmd="skills"><span class="cmd">skills:</span> technical skills</span>
+            <span class="command-hint" data-cmd="experience"><span class="cmd">exp:</span> work experience</span>
+            <span class="command-hint" data-cmd="contact"><span class="cmd">contact:</span> get in touch</span>
+        </div>
+    </div>
 </body>
 
 </html>

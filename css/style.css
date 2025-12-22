@@ -1,41 +1,208 @@
-/* All ulable color class */
-.color-background {
-    background-color: #1e1e1e;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.color-text {
-    color: #d4d4d4;
+body {
+    background-color: #0a0a0a;
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+    padding: 20px;
+    line-height: 1.6;
 }
 
-.color-keyword {
-    color: #569cd6;
+.terminal {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #000;
+    border: 2px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+    overflow: hidden;
 }
 
-.color-string {
-    color: #ce9178;
+.terminal-header {
+    background-color: #1a1a1a;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #333;
 }
 
-.color-function {
-    color: #dcdcaa;
+.terminal-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
 }
 
-.color-comment {
-    color: #6a9955;
+.btn-red {
+    background-color: #ff5f56;
 }
 
-.color-number {
-    color: #b5cea8;
+.btn-yellow {
+    background-color: #ffbd2e;
 }
 
-/* font weight classes */
-.fw-bold {
+.btn-green {
+    background-color: #27c93f;
+}
+
+.terminal-title {
+    margin-left: 10px;
+    color: #666;
+    font-size: 12px;
+}
+
+.terminal-body {
+    padding: 20px;
+    min-height: 500px;
+}
+
+.output-line {
+    margin-bottom: 10px;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.prompt {
+    color: #00ff00;
+    margin-right: 5px;
+}
+
+.command {
+    color: #ffff00;
+}
+
+.input-line {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+#command-input {
+    background: transparent;
+    border: none;
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    outline: none;
+    flex: 1;
+    caret-color: #00ff00;
+}
+
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    background-color: #00ff00;
+    animation: blink 1s infinite;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+.section-title {
+    color: #00aaff;
     font-weight: bold;
+    margin: 15px 0 10px 0;
 }
 
-.fw-normal {
-    font-weight: normal;
+.info-line {
+    color: #ccc;
+    padding-left: 20px;
 }
 
-.fw-light {
-    font-weight: lighter;
+.link {
+    color: #ff00ff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.error {
+    color: #ff0000;
+}
+
+.success {
+    color: #00ff00;
+}
+
+.help-command {
+    color: #ffff00;
+    display: inline-block;
+    width: 150px;
+}
+
+.ascii-art {
+    color: #00aaff;
+    font-size: 15px;
+    line-height: 1.2px;
+    white-space: pre;
+}
+
+.hidden {
+    display: none;
+}
+
+a {
+    color: #ff00ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.command-bar {
+    background-color: #1a1a1a;
+    border-top: 1px solid #333;
+    padding: 12px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 12px;
+    position: sticky;
+    bottom: 0;
+}
+
+.command-hint {
+    color: #666;
+    white-space: nowrap;
+}
+
+.command-hint .cmd {
+    color: #ffff00;
+    font-weight: bold;
+    margin-right: 3px;
+}
+
+.command-hint:hover {
+    color: #00ff00;
+    cursor: pointer;
+}
+
+.command-hint:hover .cmd {
+    color: #00ff00;
 }
