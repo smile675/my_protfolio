@@ -9,19 +9,19 @@ document.addEventListener("DOMContentLoaded", () => {
             action: () => {
                 return `
 <span class="section-title">Available Commands:</span> <br/>
-  <span class="help-command">about</span>         - Display information about me <br/>
-  <span class="help-command">skills</span>        - List my technical skills <br/>
-  <span class="help-command">projects</span>      - Show my projects <br/>
-  <span class="help-command">experience</span>    - Display work experience <br/>
-  <span class="help-command">exp</span>           - Alias for experience <br/>
-  <span class="help-command">education</span>     - Show educational background <br/>
-  <span class="help-command">edu</span>           - Alias for education <br/>
-  <span class="help-command">contact</span>       - Get contact information <br/>
-  <span class="help-command">social</span>        - Display social media links <br/>
-  <span class="help-command">resume</span>        - Download resume <br/>
-  <span class="help-command">clear</span>         - Clear terminal <br/>
-  <span class="help-command">help</span>          - Display this help message <br/>
-  <span class="help-command">banner</span>        - Display welcome banner <br/>
+<span class="help-command">about</span>         - Display information about me <br/>
+<span class="help-command">skills</span>        - List my technical skills <br/>
+<span class="help-command">projects</span>      - Show my projects <br/>
+<span class="help-command">experience</span>    - Display work experience <br/>
+<span class="help-command">exp</span>           - Alias for experience <br/>
+<span class="help-command">education</span>     - Show educational background <br/>
+<span class="help-command">edu</span>           - Alias for education <br/>
+<span class="help-command">contact</span>       - Get contact information <br/>
+<span class="help-command">social</span>        - Display social media links <br/>
+<span class="help-command">resume</span>        - Download resume <br/>
+<span class="help-command">clear</span>         - Clear terminal <br/>
+<span class="help-command">help</span>          - Display this help message <br/>
+<span class="help-command">banner</span>        - Display welcome banner <br/>
 `;
             }
         },
@@ -58,32 +58,25 @@ document.addEventListener("DOMContentLoaded", () => {
         projects: {
             description: 'My projects',
             action: () => {
-                return `
-<span class="section-title">$ git log --projects --oneline</span>
+                let output = `<span class="section-title">$ git log --projects</span><br/>`;
+                for (const project of myProjectList) {
+                    output += `<br/>`;
+                    output += `<span class="command">Project:</span> `;
+                    output += `<span class="info-line">${project.name}</span><br/>`;
 
-<span class="success">●</span> <span class="command">E-Commerce Platform</span>
-  Built a full-stack e-commerce platform using React and Node.js
-  Handles 10K+ daily active users with real-time inventory management
-  Tech: React, Node.js, PostgreSQL, Redis, AWS
-  <a href="https://github.com/johndoe/ecommerce" target="_blank">github.com/johndoe/ecommerce</a>
+                    output += `<span class="command">Description:</span>`;
+                    output += `<span class="info-line">${project.description}</span><br/>`;
 
-<span class="success">●</span> <span class="command">DevOps Automation Tool</span>
-  Created CLI tool to automate deployment pipelines
-  Reduced deployment time by 70% across 50+ microservices
-  Tech: Python, Docker, Kubernetes, Bash
-  <a href="https://github.com/johndoe/devops-tool" target="_blank">github.com/johndoe/devops-tool</a>
+                    output += `<span class="command">Tech:</span> `;
+                    output += `<span class="info-line">${project.technologies}</span><br/>`;
 
-<span class="success">●</span> <span class="command">Real-time Chat Application</span>
-  WebSocket-based chat with end-to-end encryption
-  Supports file sharing, typing indicators, and read receipts
-  Tech: WebSocket, React, Express, MongoDB
-  <a href="https://github.com/johndoe/chat-app" target="_blank">github.com/johndoe/chat-app</a>
+                    if (project.url) {
+                        output += `<span class="command">URL:</span> `;
+                        output += `<a href="${project.url}" target="_blank">${project.url}</a><br/>`;
+                    }
+                }
 
-<span class="success">●</span> <span class="command">Open Source Contributions</span>
-  Active contributor to React, Node.js, and various NPM packages
-  200+ PRs merged, 1000+ stars across repositories
-  <a href="https://github.com/johndoe" target="_blank">github.com/johndoe</a>
-`;
+                return output
             }
         },
         experience: {

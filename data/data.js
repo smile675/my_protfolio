@@ -81,40 +81,40 @@ const certificationList = [
 
 const myProjectList = [
     {
-        name: "Amazon Clone",
-        logo: "amazon-clone.png",
-        technologies: ["Flutter", "Node Js", "JavaScript", "MongoDB",],
-        desc: "A clone of the Amazon mobile application for Android.",
+        name: "Server Security Test",
+        description: "A Python command-line tool for performing basic load testing and security stress checks on any web server",
+        technologies: "Python",
+        url: "https://github.com/smile675/server-security-test"
+    },
+    {
+        name: "Xitoss Distributor",
+        description: "An application for distributor companies, to improve their markeing and operational activites.",
+        technologies: "Python, Django, Docker, Nginx, ShellScripts, PostgreSQL, Boostrap, JavaScript",
+        url: "https://demo-distributor.top"
+    },
+    {
+        name: "Distributor Deployment",
+        description: "A project to deploy Xitoss Distributor. Although made for Xitoss Distributor, the same project can be used to deploy any application to a VPS server by changing few setups",
+        technologies: "Python, Docker, Nginx, ShellScripts",
+        url: "https://github.com/xitoss/distributor-deployment"
+    },
+    {
+        name: "My Portfolio",
+        description: "A pure HTML CSS JS project to build my own portfolio, Deploying directly from GitHub",
+        technologies: "HTML CSS JavaScript",
+        url: "https://ismail-hossain.dev"
+    },
+    {
+        name: "Xitoss",
+        description: "A Website to showcase my software company.",
+        technologies: "HTML CSS JavaScript",
+        url: "https://xitoss.com"
+    },
+    {
+        name: "MyQuotes",
+        description: "A social media like platform where user can publish their authentic quotes and thoughts. Currently, the application is under maintenance, I made it offline after being active for a air so that can improve.",
+        technologies: "Python, Django, Boostrap, MySQL, HTML, CSS, JavaScript",
+        url: null,
     },
 
-    {
-        name: "Cashelp pro",
-        logo: "chp.png",
-        technologies: ["Flutter", "Sqflite", "SQL"],
-        desc: "A POS Android application for small retail shops to manage sales and basic accounts in offline mode with local database system.",
-    },
-    {
-        name: "Martlink Market Solution",
-        logo: "martlink.png",
-        technologies: ["Flutter", "PHP", "SQL Database"],
-        desc: "A marketplace solution for wholesalers, retailers, and small pop-up shops where each of them can interact with each other to promote their business and manage POS and accounting. Both mobile and web applications are available for this project.",
-    },
-    {
-        name: "Qr Profile",
-        logo: "qrprofile.png",
-        technologies: ["Flutter", "PHP", "SQL Database", "HTML", "CSS", "JavaScript"],
-        desc: "A personal online profile service with the power of QR. A user can use many features, such as creating a profile, resume, social and e-commerce network, and share each of them using a single dynamic QR Code or Link. Additionally, this has a bonus feature of creating an NFC Business card.",
-    },
-    {
-        name: "Mytra Clone",
-        logo: "mytra-clone.png",
-        technologies: ["HTML", "CSS", "JavaScript"],
-        desc: "This is a clone application of the Mytra E-commerce website using pure HTML, CSS, and JavaScript for learning purposes.",
-    },
-    {
-        name: "Movie Browser",
-        logo: "movie-browser.png",
-        technologies: ["React JS", "CSS", "Boostrap"],
-        desc: "A website to browse any movie from the TMDb API. This website is for practicing React JS.",
-    },
 ];
