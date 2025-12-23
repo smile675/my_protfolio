@@ -30,12 +30,12 @@ document.addEventListener("DOMContentLoaded", () => {
             action: () => {
                 let output = '<span class="section-title">$ cat about.txt</span><br/>';
 
-                for (const [key, value] of Object.entries(aboutData)) {
+                for (const [key, value] of Object.entries(about)) {
                     const label =
                         key.charAt(0).toUpperCase() +
                         key.slice(1).replace(/_/g, ' ');
-                    output += `<span class="command">${label}:</span> `;
-                    output += `<span class="info-line">${value}</span> <br/>`;
+                    output += `<span class="command">${label}:</span>`;
+                    output += `<span class="info-line">${value}</span><br/>`;
                 }
 
                 return output;
@@ -44,27 +44,15 @@ document.addEventListener("DOMContentLoaded", () => {
         skills: {
             description: 'Technical skills',
             action: () => {
-                return `
-<span class="section-title">$ ls -la skills/</span>
+                let output = '<span class="section-title">$ ls -la skills/</span><br/>'
+                for (const [key, value] of Object.entries(technicalSkill)) {
+                    const label = key.charAt(0).toUpperCase() + key.slice(1).replace(/_/g, ' ');
+                    output += `<span class="command">${label}:</span><br/>`;
+                    output += `<span class="info-line">${value}</span><br/>`
 
-<span class="info-line">Languages:</span>
-<span class="info-line">  └─ JavaScript, TypeScript, Python, Java, Go, C++</span>
+                }
 
-<span class="info-line">Frontend:</span>
-<span class="info-line">  └─ React, Vue.js, Next.js, HTML5, CSS3, Tailwind</span>
-
-<span class="info-line">Backend:</span>
-<span class="info-line">  └─ Node.js, Express, Django, FastAPI, Spring Boot</span>
-
-<span class="info-line">Databases:</span>
-<span class="info-line">  └─ PostgreSQL, MongoDB, Redis, MySQL</span>
-
-<span class="info-line">DevOps:</span>
-<span class="info-line">  └─ Docker, Kubernetes, AWS, GCP, CI/CD, GitHub Actions</span>
-
-<span class="info-line">Tools:</span>
-<span class="info-line">  └─ Git, Linux, Vim, VS Code, Postman</span>
-`;
+                return output;
             }
         },
         projects: {

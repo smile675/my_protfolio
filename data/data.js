@@ -1,72 +1,44 @@
-const programmingSkills = [
-    {
-        logo: "flutter.png",
-        name: "Flutter"
-    },
-    {
-        logo: "php.png",
-        name: "PHP"
-    },
-    {
-        logo: "sql.png",
-        name: "Database"
-    },
-    {
-        logo: "html.png",
-        name: "HTML"
-    },
-    {
-        logo: "css.png",
-        name: "CSS"
-    },
+// This dob will be used to calculate age
+const dob = new Date("1995-07-13");
 
 
-    {
-        logo: "javascript.png",
-        name: "JavaScript"
-    },
+function calculateAge(dob) {
+    /**
+     * Calculate age
+     * param: dob [Date]
+     * return: age [int]
+     */
+    const today = new Date();
+    let age = today.getFullYear() - dob.getFullYear();
 
+    const monthDiff = today.getMonth() - dob.getMonth();
+    const dayDiff = today.getDate() - dob.getDate();
 
-    {
-        logo: "react.png",
-        name: "React"
-    },
-    {
-        logo: "python.png",
-        name: "Python"
+    // If birthday hasn’t occurred yet this year
+    if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+        age--;
     }
-];
 
-const developmentSkills = [
-    {
-        name: "Mobile App development",
-        level: 90,
-    },
-    {
-        name: "Web development",
-        level: 90,
-    },
-    {
-        name: "Dynamic web application",
-        level: 80,
-    },
-    {
-        name: "Backend development",
-        level: 85,
-    },
+    return age;
+}
 
-    {
-        name: "Database management",
-        level: 70,
-    },
+const about = {
+    name: "Ismail Hossain",
+    role: "Software Developer",
+    location: "Noakhali, Bangladesh",
+    age: calculateAge(dob),
+    languages: "Bangla, English",
+    hobbies: "Coding, Chess"
+};
 
-    {
-        name: "Cyber Security",
-        level: 10,
-    },
-
-
-]
+const technicalSkill = {
+    languages: "Python, PHP, C, Flutter, JavaScript, TypeScript, GO",
+    frontend: "HTML, CSS, JS, Tailwind, Boostrap, React, NextJS",
+    backend: "Django, Node.js, FastAPI, PHP, GO",
+    database: "PostgreSQL, MySQL, MongoDB, Redis",
+    devOps: "Docker, Nginx, CI/CD, Github Actions",
+    tools: "Git, Linux, Vim, VS Code, Postman"
+}
 
 
 const certificationList = [
