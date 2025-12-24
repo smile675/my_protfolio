@@ -40,45 +40,6 @@ const technicalSkill = {
     tools: "Git, Linux, Vim, VS Code, Postman"
 }
 
-
-const certificationList = [
-    {
-        name: "Bachelor of Mechanical Engineering",
-        complete: true,
-        progress: 100,
-
-    },
-    {
-        name: "Flutter & Dart - The Complete Guide at Udemy",
-        complete: true,
-        progress: 100,
-
-    },
-    {
-        name: "The Ultimate 2024 Fullstack Web Development Bootcamp at Udemy",
-        complete: true,
-        progress: 100,
-
-    },
-    {
-        name: "Java 17 Masterclass: Start Coding at Udemy",
-        complete: false,
-        progress: 80,
-    },
-    {
-        name: "Flutter & Firebase Tutorial: Build 5 Social Media Apps",
-        complete: true,
-        progress: 100,
-
-    },
-    {
-        name: "C Programming Step by Step - Complete Tutorial For Beginners",
-        complete: false,
-        progress: 10,
-
-    },
-];
-
 const myProjectList = [
     {
         name: "Server Security Test",
@@ -118,3 +79,72 @@ const myProjectList = [
     },
 
 ];
+
+const educationList = [
+    {
+        inistitute: "HarvardX - Online learning initiative of Harvard University",
+        location: "Online EDX",
+        course: "CS50's Introduction to Cybersecurity",
+        timeline: "Feb 2025",
+    },
+    {
+        inistitute: "HarvardX - Online learning initiative of Harvard University",
+        location: "Online EDX",
+        course: "CS50's Introduction to Computer Science",
+        timeline: "Dec 2024",
+    },
+    {
+        inistitute: "HarvardX - Online learning initiative of Harvard University",
+        location: "Online EDX",
+        course: "CS50's Web Programming with Python and JavaScript",
+        timeline: "Nov 2024",
+    },
+    {
+        inistitute: "HarvardX - Online learning initiative of Harvard University",
+        location: "Online EDX",
+        course: "CS50's Introduction to Programming with Python",
+        timeline: "Nov 2024",
+    },
+    {
+        inistitute: "Birla Inistitute of Technology & Science",
+        location: "Online, India",
+        course: "Introduction to Programming with C",
+        timeline: "Oct 2024",
+    },
+    {
+        inistitute: "Udemy Online Course [29.5 Hours]",
+        location: "Online",
+        course: "Flutter & Firebase: 5 Social Media Apps",
+        timeline: "Sept 2024",
+    },
+    {
+        inistitute: "Udemy Online Course [55 Hours]",
+        location: "Online",
+        course: "The Ultimate Fullstack Web Development Bootcamp",
+        timeline: "Sept 2024",
+    },
+    {
+        inistitute: "Udemy Online Course [42.5 Hours]",
+        location: "Online",
+        course: "Flutter & Dart - The complete Guide",
+        timeline: "Feb 2022",
+    },
+    {
+        inistitute: "Inti Internation College",
+        location: "Subang, Malaysia",
+        course: "Bachelor of Mechanical Engineering",
+        timeline: "2014-2020",
+    },
+    {
+        inistitute: "Milestone College",
+        location: "Dhaka, Bangladesh",
+        course: "Higher Secondary School Certificate (HSC)",
+        timeline: "2011-2013",
+    },
+    {
+        inistitute: "Milestone College",
+        location: "Dhaka, Bangladesh",
+        course: "Secondary School Certificate (SSC)",
+        timeline: "2010-2011",
+    },
+]

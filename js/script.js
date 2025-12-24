@@ -108,19 +108,24 @@ document.addEventListener("DOMContentLoaded", () => {
         education: {
             description: 'Education',
             action: () => {
-                return `
-<span class="section-title">$ cat education.txt</span>
+                let output = `<span class="section-title">$ cat education.txt</span><br/>`;
+                for (const edu of educationList) {
+                    output += `<br/>`;
+                    output += `<span class="command">Inistitution:</span> `;
+                    output += `<span class="info-line">${edu.inistitute}</span><br/>`;
 
-<span class="command">Bachelor of Science in Computer Science</span>
-<span class="info-line">University of Technology | 2014 - 2018</span>
-<span class="info-line">GPA: 3.8/4.0</span>
-<span class="info-line">Focus: Software Engineering, Algorithms, Data Structures</span>
+                    output += `<span class="command">Location:</span>`;
+                    output += `<span class="info-line">${edu.location}</span><br/>`;
 
-<span class="section-title">Certifications:</span>
-<span class="info-line">• AWS Certified Solutions Architect</span>
-<span class="info-line">• Google Cloud Professional Developer</span>
-<span class="info-line">• Kubernetes Administrator (CKA)</span>
-`;
+                    output += `<span class="command">Course:</span> `;
+                    output += `<span class="info-line">${edu.course}</span><br/>`;
+
+                    output += `<span class="command">Timeline:</span> `;
+                    output += `<span class="info-line">${edu.timeline}</span><br/>`;
+
+                }
+
+                return output;
             }
         },
         contact: {
