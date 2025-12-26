@@ -135,6 +135,16 @@ body {
     padding-left: 20px;
 }
 
+.comment {
+    color: #6a9955;
+    font-family: monospace;
+}
+
+.comment::before {
+    content: "# ";
+}
+
+
 .link {
     color: #ff00ff;
     text-decoration: underline;

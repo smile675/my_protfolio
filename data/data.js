@@ -49,7 +49,7 @@ const myProjectList = [
     },
     {
         name: "Xitoss Distributor",
-        description: "An application for distributor companies, to improve their markeing and operational activites.",
+        description: "An application for distributor companies, to improve their markeing and operational activites. Below the url is to demostrate the application, how it will look when a client purchase from me.",
         technologies: "Python, Django, Docker, Nginx, ShellScripts, PostgreSQL, Boostrap, JavaScript",
         url: "https://demo-distributor.top"
     },
@@ -60,12 +60,6 @@ const myProjectList = [
         url: "https://github.com/xitoss/distributor-deployment"
     },
     {
-        name: "My Portfolio",
-        description: "A pure HTML CSS JS project to build my own portfolio, Deploying directly from GitHub",
-        technologies: "HTML CSS JavaScript",
-        url: "https://ismail-hossain.dev"
-    },
-    {
         name: "Xitoss",
         description: "A Website to showcase my software company.",
         technologies: "HTML CSS JavaScript",
@@ -73,7 +67,7 @@ const myProjectList = [
     },
     {
         name: "MyQuotes",
-        description: "A social media like platform where user can publish their authentic quotes and thoughts. Currently, the application is under maintenance, I made it offline after being active for a air so that can improve.",
+        description: "A social media like platform where user can publish their authentic quotes and thoughts. Currently, the application is under maintenance, I made it offline after being active for a year so that can improve.",
         technologies: "Python, Django, Boostrap, MySQL, HTML, CSS, JavaScript",
         url: null,
     },
@@ -148,3 +142,58 @@ const educationList = [
         timeline: "2010-2011",
     },
 ]
+
+const jobExperience = [
+    {
+        organization: "Xitoss",
+        position: "Founder & CEO",
+        location: "Noakhali, Bangladesh",
+        timeline: "May 2025 - Present",
+        url: "https://xitoss.com",
+    },
+    {
+        organization: "Dzora Resources",
+        position: "Software Developer & Accounting & Inventory Admin",
+        location: "Klang, Selangor, Malaysia",
+        timeline: "Nov 2024 - Present",
+        url: "https://www.dzora.org",
+    },
+    {
+        organization: "Dzora Resources",
+        position: "Inventory Admin",
+        location: "Petaling Jaya, Selangor, Malaysia",
+        timeline: "Jan 2022 - Oct 2024",
+        url: "https://www.dzora.org",
+    },
+    {
+        organization: "Dzora Resources",
+        position: "Administrative Assistant",
+        location: "Petaling Jaya, Selangor, Malaysia",
+        timeline: "Feb 2019 -  Dec 2021",
+        url: "https://www.dzora.org",
+    },
+    {
+        organization: "Woodpeckers Timber",
+        position: "Administrative Assistant",
+        location: "Petaling Jaya, Selangor, Malaysia",
+        timeline: "Oct 2018 - Feb 2019",
+        url: null,
+    },
+]
+
+
+contacts = {
+    email: "dev.ismail@yahoo.com",
+    phone: "+601116220501",
+    location: "Klang, Malaysia",
+    comment: "I prefer WhatsApp for quick communication and email for messages that include attachments."
+}
+
+socials = {
+    github: "https://github.com/smile675",
+    whatsapp: "https://wa.me/+601116220501",
+    website: "https://ismail-hossain.dev",
+    twitter: "https://x.com/smile_675",
+    facebook: "https://www.facebook.com/ismail.hossain.819318/",
+    comment: "I rarely use Facebook or Twitter (X), and I've completely opted out of LinkedIn since Nov 2025."
+}

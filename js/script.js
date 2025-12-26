@@ -82,27 +82,28 @@ document.addEventListener("DOMContentLoaded", () => {
         experience: {
             description: 'Work experience',
             action: () => {
-                return `
-<span class="section-title">$ cat experience.log</span>
+                let output = `<span class="section-title">$ cat experience.log</span><br/>`;
+                for (const exp of jobExperience) {
+                    output += `<br/>`;
+                    output += `<span class="command">Organization:</span> `;
+                    output += `<span class="info-line">${exp.organization}</span><br/>`;
 
-[2022 - Present] <span class="command">Senior Software Engineer</span>
-<span class="info-line">TechCorp Inc. | San Francisco, CA</span>
-<span class="info-line">• Lead development of microservices architecture serving 1M+ users</span>
-<span class="info-line">• Mentored 5 junior developers and conducted code reviews</span>
-<span class="info-line">• Reduced API response time by 40% through optimization</span>
+                    output += `<span class="command">Job Title:</span>`;
+                    output += `<span class="info-line">${exp.position}</span><br/>`;
 
-[2020 - 2022] <span class="command">Full Stack Developer</span>
-<span class="info-line">StartupXYZ | Remote</span>
-<span class="info-line">• Built and deployed 15+ features from scratch</span>
-<span class="info-line">• Implemented CI/CD pipeline reducing deployment time by 60%</span>
-<span class="info-line">• Collaborated with cross-functional teams in agile environment</span>
+                    output += `<span class="command">Location:</span> `;
+                    output += `<span class="info-line">${exp.location}</span><br/>`;
 
-[2018 - 2020] <span class="command">Junior Developer</span>
-<span class="info-line">WebSolutions Co. | New York, NY</span>
-<span class="info-line">• Developed responsive web applications using React and Node.js</span>
-<span class="info-line">• Fixed 100+ bugs and improved code quality by 30%</span>
-<span class="info-line">• Participated in daily standups and sprint planning</span>
-`;
+                    output += `<span class="command">Timeline:</span> `;
+                    output += `<span class="info-line">${exp.timeline}</span><br/>`;
+
+                    if (exp.url) {
+                        output += `<span class="command">Org URL:</span> `;
+                        output += `<a href="${exp.url}" target="_blank">${exp.url}</a><br/>`;
+                    }
+
+                }
+                return output
             }
         },
         education: {
@@ -131,30 +132,48 @@ document.addEventListener("DOMContentLoaded", () => {
         contact: {
             description: 'Contact information',
             action: () => {
-                return `
-<span class="section-title">$ cat contact.txt</span>
 
-<span class="info-line">Email:    <a href="mailto:john.dev@example.com">john.dev@example.com</a></span>
-<span class="info-line">Phone:    +1 (555) 123-4567</span>
-<span class="info-line">Location: San Francisco, CA</span>
-<span class="info-line">Website:  <a href="https://johndeveloper.com" target="_blank">johndeveloper.com</a></span>
+                let output = `<span class="section-title">$ cat contact.txt</span><br/>`
 
-<span class="success">Feel free to reach out for collaboration or opportunities!</span>
-`;
+                for (const [key, value] of Object.entries(contacts)) {
+                    const label = makeLabel(key);
+
+                    if (key == "comment") {
+                        output += `<span class="comment">${value}</span><br/>`
+                    } else {
+                        output += `<span class="command">${label}</span>`;
+                        if (key == "email") {
+                            output += `<a class="info-line" href="mailto:${value}">${value}</a><br/>`
+                        } else if (key == "phone" || key == "mobile") {
+                            output += `<a class="info-line" href="tel:${value}">${value}</a><br/>`
+                        } else {
+                            output += `<span class="info-line">${value}</span><br/>`
+                        }
+                    }
+
+
+                }
+
+                return output;
             }
         },
         social: {
             description: 'Social media links',
             action: () => {
-                return `
-<span class="section-title">$ ls -la social/</span>
 
-<span class="info-line">GitHub:     <a href="https://github.com/johndoe" target="_blank">github.com/johndoe</a></span>
-<span class="info-line">LinkedIn:   <a href="https://linkedin.com/in/johndoe" target="_blank">linkedin.com/in/johndoe</a></span>
-<span class="info-line">Twitter:    <a href="https://twitter.com/johndoe" target="_blank">twitter.com/johndoe</a></span>
-<span class="info-line">Dev.to:     <a href="https://dev.to/johndoe" target="_blank">dev.to/johndoe</a></span>
-<span class="info-line">Portfolio:  <a href="https://johndeveloper.com" target="_blank">johndeveloper.com</a></span>
-`;
+                let output = `<span class="section-title">$ ls -la social/</span><br/>`
+
+                for (const [key, value] of Object.entries(socials)) {
+                    const label = makeLabel(key);
+                    if (key == "comment") {
+                        output += `<span class="comment">${value}</span><br/>`
+                    } else {
+                        output += `<span class="command">${label}</span>`;
+                        output += `<a class="info-line" href="${value}" target="_blank">${value}</a><br/>`
+                    }
+
+                }
+                return output;
             }
         },
         resume: {
@@ -193,6 +212,10 @@ Downloading resume...
             action: () => commands.education.action()
         }
     };
+
+    function makeLabel(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1).replace(/_/g, ' ');
+    }
 
     function getBanner() {
         return `<span class="ascii-art">                                                                             
