@@ -17,6 +17,33 @@
             background-color: #525252;
             padding: 20px;
             line-height: 1.6;
+            position: relative;
+        }
+
+        .download-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        .download-btn:hover {
+            background-color: #2980b9;
+        }
+
+        @media print {
+            .download-btn {
+                display: none;
+            }
         }
 
         .page {
@@ -246,6 +273,16 @@
                 box-shadow: none;
                 width: 210mm;
                 min-height: 297mm;
+                page-break-inside: avoid;
+            }
+
+            .section {
+                page-break-inside: avoid;
+            }
+
+            .timeline-item,
+            .project-item {
+                page-break-inside: avoid;
             }
         }
 
@@ -265,18 +302,32 @@
 </head>
 
 <body>
+    <button class="download-btn" onclick="downloadPDF()">📥 Download as PDF</button>
     <div id="resume-container"></div>
 
     <script src="./data/data.js"></script>
     <script>
         const container = document.getElementById('resume-container');
+        const A4_HEIGHT_MM = 297;
+        const PAGE_PADDING_MM = 15;
+        const USABLE_HEIGHT_MM = A4_HEIGHT_MM - (PAGE_PADDING_MM * 2);
+        const MM_TO_PX_RATIO = 3.7795275591; // Approximate conversion at 96dpi
+        // Add safety margin to prevent overflow during print (10% less space)
+        const USABLE_HEIGHT_PX = (USABLE_HEIGHT_MM * MM_TO_PX_RATIO) * 0.90;
 
         function generateResume() {
-            let html = '<div class="page">';
+            // First, generate all content in a temporary container
+            let tempDiv = document.createElement('div');
+            tempDiv.style.position = 'absolute';
+            tempDiv.style.visibility = 'hidden';
+            tempDiv.style.width = '210mm';
+            document.body.appendChild(tempDiv);
+
+            let allContent = '';
 
             // Header Section
-            html += `
-                <div class="header">
+            allContent += `
+                <div class="header content-block" data-section="header">
                     <img src="profile.jpg" alt="${about.name}" class="profile-photo" onerror="this.style.display='none'">
                     <div class="header-content">
                         <div class="name">${about.name}</div>
@@ -292,58 +343,39 @@
             `;
 
             // About Section
-            html += `
-                <div class="section">
+            allContent += `<div class="section content-block" data-section="about">
                     <div class="section-title">Personal Information</div>
-                    <div class="about-grid">
-            `;
+                    <div class="about-grid">`;
 
             for (const [key, value] of Object.entries(about)) {
                 const label = key.charAt(0).toUpperCase() + key.slice(1).replace(/_/g, ' ');
-                html += `
-                    <div class="about-item">
+                allContent += `<div class="about-item">
                         <div class="about-label">${label}:</div>
                         <div class="about-value">${value}</div>
-                    </div>
-                `;
+                    </div>`;
             }
 
-            html += `
-                    </div>
-                </div>
-            `;
+            allContent += `</div></div>`;
 
-            // Technical Skills
-            html += `
-                <div class="section">
-                    <div class="section-title">Technical Skills</div>
-                    <div class="skills-grid">
-            `;
+            // Technical Skills - with section title separate
+            allContent += `<div class="section-title content-block" data-section="skills-title">Technical Skills</div>`;
+            allContent += `<div class="skills-grid content-block" data-section="skills-content">`;
 
             for (const [key, value] of Object.entries(technicalSkill)) {
                 const label = key.charAt(0).toUpperCase() + key.slice(1).replace(/_/g, ' ');
-                html += `
-                    <div class="skill-item">
+                allContent += `<div class="skill-item">
                         <div class="skill-label">${label}:</div>
                         <div class="skill-value">${value}</div>
-                    </div>
-                `;
+                    </div>`;
             }
 
-            html += `
-                    </div>
-                </div>
-            `;
+            allContent += `</div>`;
 
-            // Professional Experience
-            html += `
-                <div class="section">
-                    <div class="section-title">Professional Experience</div>
-            `;
+            // Professional Experience - title separate from items
+            allContent += `<div class="section-title content-block" data-section="experience-title">Professional Experience</div>`;
 
-            jobExperience.forEach(job => {
-                html += `
-                    <div class="timeline-item">
+            jobExperience.forEach((job, index) => {
+                allContent += `<div class="timeline-item content-block" data-section="exp-${index}">
                         <div class="timeline-header">
                             <div class="timeline-title">${job.position}</div>
                             <div class="timeline-timeline">${job.timeline}</div>
@@ -351,82 +383,109 @@
                         <div class="timeline-organization">${job.organization}</div>
                         <div class="timeline-location">${job.location}</div>
                         ${job.url ? `<a href="${job.url}" class="timeline-link" target="_blank">${job.url}</a>` : ''}
-                    </div>
-                `;
+                    </div>`;
             });
 
-            html += `</div>`;
+            // Projects - title separate from items
+            allContent += `<div class="section-title content-block" data-section="projects-title">Projects</div>`;
 
-            // Check if we need a new page
-            html += '</div><div class="page">';
-
-            // Projects
-            html += `
-                <div class="section">
-                    <div class="section-title">Projects</div>
-            `;
-
-            myProjectList.forEach(project => {
-                html += `
-                    <div class="project-item">
+            myProjectList.forEach((project, index) => {
+                allContent += `<div class="project-item content-block" data-section="proj-${index}">
                         <div class="project-name">${project.name}</div>
                         <div class="project-description">${project.description}</div>
                         <div class="project-tech">Technologies: ${project.technologies}</div>
                         ${project.url ? `<a href="${project.url}" class="project-link" target="_blank">${project.url}</a>` : '<span class="project-link">Currently offline</span>'}
-                    </div>
-                `;
+                    </div>`;
             });
 
-            html += `</div>`;
+            // Education - title separate from items
+            allContent += `<div class="section-title content-block" data-section="education-title">Education & Certifications</div>`;
 
-            // Education
-            html += `
-                <div class="section">
-                    <div class="section-title">Education & Certifications</div>
-            `;
-
-            educationList.forEach(edu => {
-                html += `
-                    <div class="timeline-item">
+            educationList.forEach((edu, index) => {
+                allContent += `<div class="timeline-item content-block" data-section="edu-${index}">
                         <div class="timeline-header">
                             <div class="timeline-title">${edu.course}</div>
                             <div class="timeline-timeline">${edu.timeline}</div>
                         </div>
                         <div class="timeline-organization">${edu.inistitute}</div>
                         <div class="timeline-location">${edu.location}</div>
-                    </div>
-                `;
+                    </div>`;
             });
 
-            html += `
-                </div>
-            `;
-
             // Social Links
-            html += `
-                <div class="section">
+            allContent += `<div class="section content-block" data-section="social">
                     <div class="section-title">Online Presence</div>
-                    <div class="contact-info">
-            `;
+                    <div class="contact-info">`;
 
             for (const [key, value] of Object.entries(socials)) {
                 if (key !== 'comment' && value) {
                     const label = key.charAt(0).toUpperCase() + key.slice(1);
-                    html += `<div class="contact-item"><a href="${value}" class="timeline-link" target="_blank">${label}</a></div>`;
+                    allContent += `<div class="contact-item"><a href="${value}" class="timeline-link" target="_blank">${label}</a></div>`;
                 }
             }
 
-            html += `
-                    </div>
+            allContent += `</div>
                     <div style="margin-top: 10px; font-size: 12px; color: #7f8c8d; font-style: italic;">
                         ${socials.comment}
                     </div>
-                </div>
-            `;
+                </div>`;
 
-            html += '</div>';
+            // Add all content to temp div
+            tempDiv.innerHTML = allContent;
 
-            container.innerHTML = html;
+            // Now split into pages based on height - allow sections to span pages
+            const blocks = tempDiv.querySelectorAll('.content-block');
+            let pages = [];
+            let currentPage = [];
+            let currentHeight = 0;
+
+            blocks.forEach(block => {
+                const blockHeight = block.offsetHeight;
+
+                // If this single block is taller than a page, it will span pages (CSS will handle it)
+                if (blockHeight > USABLE_HEIGHT_PX) {
+                    // If current page has content, save it
+                    if (currentPage.length > 0) {
+                        pages.push(currentPage);
+                        currentPage = [];
+                        currentHeight = 0;
+                    }
+                    // Add this large block to its own page(s)
+                    pages.push([block.outerHTML]);
+                }
+                // If adding this block would exceed page height, start new page
+                else if (currentHeight + blockHeight > USABLE_HEIGHT_PX && currentPage.length > 0) {
+                    pages.push(currentPage);
+                    currentPage = [block.outerHTML];
+                    currentHeight = blockHeight;
+                }
+                // Otherwise add to current page
+                else {
+                    currentPage.push(block.outerHTML);
+                    currentHeight += blockHeight;
+                }
+            });
+
+            // Add the last page
+            if (currentPage.length > 0) {
+                pages.push(currentPage);
+            }
+
+            // Generate final HTML with proper pages
+            let finalHTML = '';
+            pages.forEach(pageContent => {
+                finalHTML += '<div class="page">' + pageContent.join('') + '</div>';
+            });
+
+            container.innerHTML = finalHTML;
+
+            // Remove temp div
+            document.body.removeChild(tempDiv);
+        }
+
+        // Download as PDF function
+        function downloadPDF() {
+            window.print();
         }
 
         // Generate resume on page load
