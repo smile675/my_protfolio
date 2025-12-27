@@ -126,11 +126,16 @@
             font-size: 18px;
             font-weight: bold;
             color: #2c3e50;
+            margin-top: 20px;
             margin-bottom: 10px;
             padding-bottom: 5px;
             border-bottom: 2px solid #3498db;
             text-transform: uppercase;
             letter-spacing: 1px;
+        }
+
+        .section-title:first-child {
+            margin-top: 0;
         }
 
         /* About Section */
@@ -328,7 +333,7 @@
             // Header Section
             allContent += `
                 <div class="header content-block" data-section="header">
-                    <img src="profile.jpg" alt="${about.name}" class="profile-photo" onerror="this.style.display='none'">
+                    <img src="./assets/image/profile_photo.jpg" alt="${about.name}" class="profile-photo" onerror="this.style.display='none'">
                     <div class="header-content">
                         <div class="name">${about.name}</div>
                         <div class="role">${about.role}</div>
