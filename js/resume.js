@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Header Section
         allContent += `
                 <div class="header content-block" data-section="header">
-                    <img src="./assets/image/profile_photo.jpg" alt="${about.name}" class="profile-photo" onerror="this.style.display='none'">
+                    <img src="./assets/image/profile_photo.webp" alt="${about.name}" class="profile-photo" onerror="this.style.display='none'">
                     <div class="header-content">
                         <div class="name">${about.name}</div>
                         <div class="role">${about.role}</div>

@@ -20,8 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
 <span class="help-command">social</span>        - Display social media links <br/>
 <span class="help-command">resume</span>        - Open resume <br/>
 <span class="help-command">clear</span>         - Clear terminal <br/>
-<span class="help-command">help</span>          - Display this help message <br/>
 <span class="help-command">intro</span>         - Display intro <br/>
+<span class="help-command">img</span>           - View my profile photo <br/>
+<span class="help-command">help</span>          - Display this help message <br/>
 `;
             }
         },
@@ -176,6 +177,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 return output;
             }
         },
+        img: {
+            description: 'Now You See Me',
+            action: () => {
+                return `
+<span class="section-title">$ xdg-open image.jpg/</span><br/>
+<span class="command">Now You See Me!</span><br/>
+<img src="../assets/image/profile_photo.webp" alt="Profile Photo" class="terminal-img" /><br/>
+`;
+            }
+        },
         resume: {
             description: 'Resume Version',
             action: () => {
@@ -207,7 +218,7 @@ Opening resume in <span id="countdown">5</span> seconds...<br/>
         edu: {
             description: 'Alias for education',
             action: () => commands.education.action()
-        }
+        },
     };
 
     function makeLabel(str) {

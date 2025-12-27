@@ -113,6 +113,14 @@ body {
     margin-left: 2px;
 }
 
+.terminal-img {
+    margin-top: 10px;
+    max-width: 180px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
 @keyframes blink {
 
     0%,
