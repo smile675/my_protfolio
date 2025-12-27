@@ -22,6 +22,8 @@ function calculateAge(dob) {
     return age;
 }
 
+const intro = "Hi, I'm Ismail Hossain from Bangladesh. I'm currently working in Malaysia as a Software Developer, Inventory Administrator, and Accountant. Recently, I started my own startup company, Xitoss, where I focus mainly on coding and building new projects."
+
 const about = {
     name: "Ismail Hossain",
     role: "Software Developer",

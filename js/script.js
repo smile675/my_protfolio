@@ -18,10 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
 <span class="help-command">edu</span>           - Alias for education <br/>
 <span class="help-command">contact</span>       - Get contact information <br/>
 <span class="help-command">social</span>        - Display social media links <br/>
-<span class="help-command">resume</span>        - Download resume <br/>
+<span class="help-command">resume</span>        - Open resume <br/>
 <span class="help-command">clear</span>         - Clear terminal <br/>
 <span class="help-command">help</span>          - Display this help message <br/>
-<span class="help-command">banner</span>        - Display welcome banner <br/>
+<span class="help-command">intro</span>         - Display intro <br/>
 `;
             }
         },
@@ -197,10 +197,10 @@ Downloading resume...
                 return null;
             }
         },
-        banner: {
+        intro: {
             description: 'Display banner',
             action: () => {
-                return getBanner();
+                return getIntro();
             }
         },
         exp: {
@@ -217,16 +217,16 @@ Downloading resume...
         return str.charAt(0).toUpperCase() + str.slice(1).replace(/_/g, ' ');
     }
 
-    function getBanner() {
+    function getIntro() {
         return `<span class="ascii-art">                                                                             
 ██ ▄█████ ██▄  ▄██ ▄████▄ ██ ██       ██  ██ ▄████▄ ▄█████ ▄█████ ▄████▄ ██ ███  ██   
 ██ ▀▀▀▄▄▄ ██ ▀▀ ██ ██▄▄██ ██ ██       ██████ ██  ██ ▀▀▀▄▄▄ ▀▀▀▄▄▄ ██▄▄██ ██ ██ ▀▄██   
 ██ █████▀ ██    ██ ██  ██ ██ ██████   ██  ██ ▀████▀ █████▀ █████▀ ██  ██ ██ ██   ██                                                                                                                                                                                       
 </span>
 
-Welcome to my interactive portfolio terminal!
-Type '<span class="command">help</span>' to see available commands.
-Type '<span class="command">about</span>' to learn more about me.
+${intro}<br/>
+Type '<span class="command">help</span>' to see available commands.<br/>
+Type '<span class="command">about</span>' to learn more about me.<br/>
 
 `;
     }
