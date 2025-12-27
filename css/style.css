@@ -1,444 +1,228 @@
-:root {
-    --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --heading-font: "Raleway", sans-serif;
-    --nav-font: "Poppins", sans-serif;
-}
-
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root {
-    --background-color: #ffffff;
-    /* Background color for the entire website, including individual sections */
-    --default-color: #272829;
-    /* Default color used for the majority of the text content across the entire website */
-    --heading-color: #050d18;
-    /* Color for headings, subheadings and title throughout the website */
-    --accent-color: #149ddd;
-    /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-    --surface-color: #ffffff;
-    /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-    --contrast-color: #ffffff;
-    /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
-    --muted: #6c757d;
-}
-
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
-:root {
-    --nav-color: #a8a9b4;
-    /* The default color of the main navmenu links */
-    --nav-hover-color: #ffffff;
-    /* Applied to main navmenu links when they are hovered over or active */
-    --nav-mobile-background-color: #040b14;
-    /* Used as the background color for mobile navigation menu */
-    --nav-dropdown-background-color: #040b14;
-    /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-    --nav-dropdown-color: #a8a9b4;
-    /* Used for navigation links of the dropdown items in the navigation menu. */
-    --nav-dropdown-hover-color: #ffffff;
-    /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
-}
-
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
-
-.light-background {
-    --background-color: #f4fafd;
-    --surface-color: #ffffff;
-}
-
-.dark-background {
-    --background-color: #040b14;
-    --default-color: #ffffff;
-    --heading-color: #ffffff;
-    --surface-color: #151f2b;
-    --contrast-color: #ffffff;
-}
-
-/* Smooth scroll */
-:root {
-    scroll-behavior: smooth;
-}
-
-/*--------------------------------------------------------------
-# General Styling & Shared Classes
---------------------------------------------------------------*/
-body {
-    color: var(--default-color);
-    background-color: var(--background-color);
-    font-family: var(--default-font);
-}
-
-a {
-    color: var(--accent-color);
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-a:hover {
-    color: color-mix(in srgb, var(--accent-color), transparent 25%);
-    text-decoration: none;
-}
-
-li strong {
-    margin-right: 8px;
-}
-
-/* Icon Colors */
-.bi {
-    color: #007bff;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: var(--heading-color);
-    font-family: var(--heading-font);
-}
-
-.header {
-    color: var(--default-color);
-    background-color: var(--background-color);
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    padding: 0 15px;
-    width: 250px;
-    transition: all ease-in-out 0.3s;
-    overflow-y: auto;
-    z-index: 997;
-    border-right: 1px solid var(--default-color);
-}
-
-@media (min-width: 1200px) {
-
-    .header~main,
-    .header~#footer {
-        margin-left: 250px;
-    }
-}
-
-@media (max-width: 1199px) {
-    .header {
-        left: -100%;
-    }
-}
-
-.header.header-show {
-    left: 0;
-}
-
-.header .header-toggle {
-    color: var(--contrast-color);
-    background-color: var(--accent-color);
-    font-size: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    z-index: 9999;
-    transition: background-color 0.3s;
-}
-
-.header .header-toggle:hover {
-    background-color: rgba(0, 123, 255, 0.85);
-    /* Fallback */
-}
-
-.header .header-toggle:focus {
-    outline: 2px solid var(--accent-color);
-    outline-offset: 2px;
-}
-
-
-
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
-.mobile-nav-toggle {
-    display: none;
-}
-
-.navmenu {
-    padding: 0;
-    z-index: 9997;
-}
-
-.navmenu ul {
-    list-style: none;
-    padding: 0 0 20px 0;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.navmenu a,
-.navmenu a:focus {
-    color: var(--nav-color);
-    padding: 15px 10px;
-    font-family: var(--nav-font);
-    font-size: 16px;
-    font-weight: 400;
+body {
+    background-color: #0a0a0a;
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.terminal {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #000;
+    border: 2px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+    overflow: hidden;
+}
+
+.terminal-header {
+    background-color: #1a1a1a;
+    padding: 10px 15px;
     display: flex;
     align-items: center;
-    white-space: nowrap;
-    transition: 0.3s;
-    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+    border-bottom: 1px solid #333;
+
 }
 
-.navmenu a .navicon,
-.navmenu a:focus .navicon {
-    font-size: 20px;
-    margin-right: 10px;
+.terminal-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
 }
 
-
-.navmenu a:hover,
-.navmenu .active,
-.navmenu .active:focus {
-    color: var(--nav-hover-color);
+.btn-red {
+    background-color: #ff5f56;
 }
 
-.navmenu a:hover .navicon,
-.navmenu .active .navicon,
-.navmenu .active:focus .navicon {
-    color: var(--accent-color);
+.btn-yellow {
+    background-color: #ffbd2e;
 }
 
-
-main {
-    width: 100%;
+.btn-green {
+    background-color: #27c93f;
 }
 
-/*--------------------------------------------------------------
-# Global Section Titles
---------------------------------------------------------------*/
+.terminal-title {
+    margin-left: 10px;
+    color: #666;
+    font-size: 12px;
+}
 
-/* .section {
-    width: 100%;
-    background-color: red;
-} */
+.terminal-body {
+    padding: 20px;
+    min-height: 500px;
+}
+
+.output-line {
+    margin-bottom: 10px;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.prompt {
+    color: #00ff00;
+    margin-right: 5px;
+}
+
+.command {
+    color: #ffff00;
+}
+
+.input-line {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+#command-input {
+    background: transparent;
+    border: none;
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    outline: none;
+    flex: 1;
+    caret-color: #00ff00;
+}
+
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    background-color: #00ff00;
+    animation: blink 1s infinite;
+    margin-left: 2px;
+}
+
+.terminal-img {
+    margin-top: 10px;
+    max-width: 180px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
 
 .section-title {
-    padding-bottom: 30px;
-    position: relative;
+    color: #00aaff;
+    font-weight: bold;
+    margin: 15px 0 10px 0;
 }
 
-.section-title h2 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    position: relative;
-}
-
-.section-title h2:after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 50px;
-    height: 3px;
-    background: var(--accent-color);
-    left: 0;
-    bottom: 0;
-}
-
-.section-title p {
-    margin-bottom: 0;
-    font-style: italic;
-    color: var(--muted);
-}
-
-
-
-/* Section Styles */
-
-/*--------------------------------------------------------------
-# About section
---------------------------------------------------------------*/
-/* .about {
-    background: linear-gradient(to right, #f8f9fa, #ffffff);
-    padding: 50px 0;
-} */
-
-/* Profile Card */
-.profile-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* Centers content vertically */
-    align-items: center;
-    /* Centers content horizontally */
-    text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    height: 100%;
-}
-
-
-
-.profile-card:hover {
-    transform: translateY(-5px);
-}
-
-.profile-card img {
-    width: 60%;
-    height: auto;
-    object-fit: contain;
-    border: 3px solid var(--accent-color);
-}
-
-/* info card */
-
-.info-card {
-    padding: 15px;
-    height: 100%;
-    border: 1px solid var(--accent-color);
-    border-radius: 10px;
-}
-
-.about ul {
-    padding: 0;
-}
-
-.about ul li {
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-}
-
-.about ul li i {
-    font-size: 20px;
-    margin-right: 10px;
-}
-
-.about p {
-    line-height: 1.8;
-}
-
-
-/*--------------------------------------------------------------
-# Skill Section
---------------------------------------------------------------*/
-
-#skills {
-    background-color: #f5f5f5;
-}
-
-.skills .name {
-    font-size: 15px;
-    font-weight: 500;
-}
-
-.skills i {
-    font-size: 16px;
-}
-
-.skills .val {
-    font-weight: 500;
-    font-size: 15;
-}
-
-.skill_name {
-    margin-bottom: 5px;
-}
-
-.skills .progress {
-    /* height: 60px; */
-    border-radius: 0;
-}
-
-
-/*--------------------------------------------------------------
-# Resume Section
---------------------------------------------------------------*/
-.resume .resume-title {
-    color: var(--heading-color);
-    font-size: 26px;
-    font-weight: 700;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.resume .resume-item {
-    padding: 0 0 20px 20px;
-    margin-top: -2px;
-    border-left: 2px solid var(--accent-color);
-    position: relative;
-}
-
-.resume .resume-item h4 {
-    line-height: 18px;
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: color-mix(in srgb, var(--default-color), transparent 20%);
-    margin-bottom: 10px;
-}
-
-.resume .resume-item h5 {
-    font-size: 16px;
-    padding: 5px 15px;
-    display: inline-block;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.resume .resume-item ul {
+.info-line {
+    color: #ccc;
     padding-left: 20px;
 }
 
-.resume .resume-item ul li {
-    padding-bottom: 10px;
+.comment {
+    color: #6a9955;
+    font-family: monospace;
 }
 
-.resume .resume-item:last-child {
-    padding-bottom: 0;
-}
-
-.resume .resume-item::before {
-    content: "";
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    border-radius: 50px;
-    left: -9px;
-    top: 0;
-    background: var(--background-color);
-    border: 2px solid var(--accent-color);
+.comment::before {
+    content: "# ";
 }
 
 
-/*--------------------------------------------------------------
-# Portfolio section
---------------------------------------------------------------*/
-
-.portfolio a {
-    text-decoration: none;
+.link {
+    color: #ff00ff;
+    text-decoration: underline;
     cursor: pointer;
 }
 
-.project-logo {
-    height: 150px;
+.error {
+    color: #ff0000;
+}
+
+.success {
+    color: #00ff00;
+}
+
+.help-command {
+    color: #ffff00;
+    display: inline-block;
     width: 150px;
-    border-radius: 100%;
-    object-fit: contain;
 }
 
-.project_card_inner {
-    padding: 10px;
+.ascii-art {
+    color: #00aaff;
+    font-size: 15px;
+    line-height: 1.2px;
+    white-space: pre;
+}
+
+.hidden {
+    display: none;
+}
+
+a {
+    color: #ff00ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.command-bar {
+    background-color: #1a1a1a;
+    border-top: 1px solid #333;
+    padding: 12px 20px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 12px;
+    position: sticky;
+    bottom: 0;
 }
 
-.project_card_inner .card-body {
-    text-align: center;
+.command-hint {
+    color: #666;
+    white-space: nowrap;
+}
+
+.command-hint .cmd {
+    color: #ffff00;
+    font-weight: bold;
+    margin-right: 3px;
+}
+
+.command-hint:hover {
+    color: #00ff00;
+    cursor: pointer;
+}
+
+.command-hint:hover .cmd {
+    color: #00ff00;
 }
