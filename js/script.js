@@ -177,16 +177,13 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         },
         resume: {
-            description: 'Download resume',
+            description: 'Resume Version',
             action: () => {
+                setTimeout(startResumeCountdown, 0);
                 return `
-<span class="section-title">$ wget resume.pdf</span>
-
-Downloading resume...
-<span class="success">█████████████████████████████████████</span> 100%
-
-<span class="success">Download complete!</span>
-<a href="#" onclick="alert('In a real implementation, this would download your resume PDF'); return false;">Click here to download resume.pdf</a>
+<span class="section-title">$ open resume</span><br/>
+Opening resume in <span id="countdown">5</span> seconds...<br/>
+<span class="comment"># Please wait</span><br/>
 `;
             }
         },
@@ -275,7 +272,7 @@ Type '<span class="command">about</span>' to learn more about me.<br/>
 
     // Initialize with banner
     window.addEventListener('load', () => {
-        addOutput(getBanner());
+        addOutput(getIntro());
     });
 
     // Command bar click handlers
@@ -287,6 +284,24 @@ Type '<span class="command">about</span>' to learn more about me.<br/>
             input.value = '';
         });
     });
+
+    function startResumeCountdown() {
+        let seconds = 5;
+        const countdownEl = document.getElementById("countdown");
+
+        const interval = setInterval(() => {
+            seconds--;
+            if (countdownEl) {
+                countdownEl.textContent = seconds;
+            }
+
+            if (seconds <= 0) {
+                clearInterval(interval);
+                window.location.href = "/resume.html";
+            }
+        }, 1000);
+    }
+
 
     // Tab completion
     input.addEventListener('keydown', (e) => {

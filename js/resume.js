@@ -179,6 +179,9 @@ document.addEventListener("DOMContentLoaded", () => {
     window.downloadPDF = function () {
         window.print();
     };
+    window.goTerminalMode = function () {
+        window.location.href = "/index.html";
+    }
 
     // Generate resume on page load
     generateResume();
